@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_rel"
+        android:layout_marginTop="22dp"
+        android:background="@color/colorPrimary"
+        >
+        <SearchView
+            android:id="@+id/simpleSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:theme="@style/SearchViewStyle"
+            android:queryHint="Search here"
+            android:searchIcon="@drawable/baseline_search_white_18dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimary"
+            android:layout_below="@id/simpleSearchView"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_rel"
+        android:background="@color/primary"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <ProgressBar
+                android:id="@+id/searchBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="192dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:visibility="visible"
+                android:indeterminateBehavior="repeat"
+                android:indeterminateOnly="false"
+                android:progressBackgroundTint="#208afa" />
+            <TextView
+                android:id="@+id/no_result_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:fontFamily="@font/actor"
+                android:textSize="16dp"
+                android:textColor="@color/cardview_light_background"
+                android:text="Sorry No Result Found..."/>
+            <TextView
+                android:id="@+id/topSearches"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abel"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="4dp"
+                android:text="Top Rated Searches"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchRecycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"></androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

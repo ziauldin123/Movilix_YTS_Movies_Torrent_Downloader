@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimaryDark"
+    >
+    <!--
+    <com.movilix.views.SwipeDisabledViewPager
+        android:layout_width="match_parent"
+        android:id="@+id/framelayout"
+        android:layout_above="@+id/bottom"
+        android:layout_height="match_parent"></com.movilix.views.SwipeDisabledViewPager>
+        -->
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@+id/bottom"-->
+<!--        android:id="@+id/framelayout"-->
+<!--        android:background="@color/colorPrimaryDark">-->
+
+<!--    </com.google.android.material.tabs.TabLayout>-->
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:id="@+id/framelayout">
+
+    </androidx.viewpager2.widget.ViewPager2>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@color/icon_color"
+        app:itemTextColor="@android:color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/nav_items"
+        >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</RelativeLayout>

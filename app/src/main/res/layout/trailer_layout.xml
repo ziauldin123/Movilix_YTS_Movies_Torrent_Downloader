@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/trailer_shape"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/youtube_layout"
+        android:visibility="visible"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            android:id="@+id/vedio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+            <com.google.android.youtube.player.YouTubePlayerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginTop="0dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/youtube_player"
+                android:layout_alignParentTop="true"
+                android:backgroundTint="@color/colorPrimaryDark"
+
+                >
+
+            </com.google.android.youtube.player.YouTubePlayerView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/btn_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vedio">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Close"
+                android:id="@+id/trailer_close_btn"
+                android:textColor="@color/cardview_light_background"
+                android:background="#FF5720"/>
+        </RelativeLayout>
+        <FrameLayout
+            android:layout_below="@+id/btn_close"
+            android:id="@+id/fl_adplaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

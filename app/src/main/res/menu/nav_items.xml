@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/action_home"
+        android:title="Home"
+        android:icon="@drawable/home_run"
+        android:enabled="true"/>
+    <item android:id="@+id/action_search"
+        android:title="Search"
+        android:icon="@drawable/search"
+        android:enabled="true"/>
+    <item android:id="@+id/action_download"
+        android:title="Downloads"
+        android:icon="@drawable/download"
+        android:enabled="true"/>
+    <item android:id="@+id/action_more"
+        android:title="More"
+        android:icon="@drawable/menu"
+        android:enabled="true"/>
+
+</menu>

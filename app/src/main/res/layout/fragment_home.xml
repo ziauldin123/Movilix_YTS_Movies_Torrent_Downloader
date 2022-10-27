@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:coverflow="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#131026">
+
+
+
+    <ScrollView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:fillViewport="true"
+        android:id="@+id/home_scroll">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fade_down">
+
+
+            <RelativeLayout
+                android:id="@+id/top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fade_image2"
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sliderRecyle"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="450dp"></androidx.recyclerview.widget.RecyclerView>
+
+                <com.kingfisher.easyviewindicator.RecyclerViewIndicator
+                    android:id="@+id/recyclerViewIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:avi_animation_enable="true"
+                    app:avi_drawable="@drawable/blue_radius"
+                    app:avi_drawable_unselected="@drawable/gray_radius"
+                    app:avi_height="5dp"
+                    app:avi_margin="5dp"
+                    app:avi_width="5dp"
+                    android:layout_below="@+id/sliderRecyle">
+
+                </com.kingfisher.easyviewindicator.RecyclerViewIndicator>
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_below="@+id/top_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/abel"
+                        android:paddingLeft="4dp"
+                        android:paddingBottom="2dp"
+                        android:text="Latest"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/latestrecycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abel"
+                        android:paddingLeft="4dp"
+                        android:paddingBottom="2dp"
+                        android:text="Top Rated"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/topratedrecycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abel"
+                        android:paddingLeft="4dp"
+                        android:paddingBottom="2dp"
+                        android:text="Popular"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/popularrecycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+                    <LinearLayout
+                        android:id="@+id/banner_container2"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abel"
+                        android:paddingLeft="4dp"
+                        android:paddingBottom="2dp"
+                        android:text="3D"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/t3drecycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abel"
+                        android:paddingLeft="4dp"
+                        android:paddingBottom="2dp"
+                        android:text="Action"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/actionrecycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abel"
+                        android:paddingLeft="4dp"
+                        android:paddingBottom="2dp"
+                        android:text="Adventure"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/adventurerecycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+                    <LinearLayout
+                        android:id="@+id/banner_container1"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                    <FrameLayout
+                        android:id="@+id/fl_adplaceholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abel"
+                        android:paddingLeft="4dp"
+                        android:paddingBottom="2dp"
+                        android:text="Sci-Fi"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/sciFi_recycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abel"
+                        android:paddingLeft="4dp"
+                        android:paddingBottom="2dp"
+                        android:text="Crime"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/crime_recycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abel"
+                        android:paddingLeft="4dp"
+                        android:paddingBottom="2dp"
+                        android:text="Fantasy"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/fantsy_recycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+                    <LinearLayout
+                        android:id="@+id/banner_container"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abel"
+                        android:paddingLeft="4dp"
+                        android:paddingBottom="2dp"
+                        android:text="Horror"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/horror_recycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/determinateBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="192dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="132dp"
+        android:indeterminate="true"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateOnly="false"
+        android:progressBackgroundTint="#208afa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ProgressBar
+        android:layout_weight="1"
+        android:id="@+id/progressBar_cyclic"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/background"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:minHeight="50dp"
+        android:minWidth="50dp"
+        android:theme="@style/AppTheme.WhiteAccent"/>
+</RelativeLayout>

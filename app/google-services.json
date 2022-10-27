@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "405308777764",
+    "project_id": "movilix-98322",
+    "storage_bucket": "movilix-98322.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405308777764:android:20ff2e4371c684cc84bfb1",
+        "android_client_info": {
+          "package_name": "com.movilix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405308777764-furg6k8ct3jfo2l72248kjfvoiurf675.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.movilix",
+            "certificate_hash": "1e96823f05b4aa97591dd890e18a6bcb2edf296c"
+          }
+        },
+        {
+          "client_id": "405308777764-ni24q1fpjs000bqou57ksdj37nc0070i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP2hl6tabrIlCXUKmI3nRhcO-UG4aVaT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405308777764-ni24q1fpjs000bqou57ksdj37nc0070i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

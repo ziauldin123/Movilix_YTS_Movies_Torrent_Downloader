@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#131026"
+   >
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:background="@drawable/fade_image2"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/homeview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="5dp"
+            android:background="#131026"
+            >
+        <ImageView
+            android:id="@+id/slidercover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/placeholder_movie"
+            android:scaleType="centerCrop"
+            android:background="#131026"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:scaleType="centerCrop"
+            android:src="@drawable/fade_image2" />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_layout"
+        android:layout_marginTop="-100dp"
+        >
+
+        <RelativeLayout
+
+            android:id="@+id/name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+           >
+            <TextView
+                android:id="@+id/imdRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:visibility="gone"
+                android:drawableRight="@drawable/ic_star_black_24dp"
+                android:fontFamily="@font/abel"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/title_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:maxLength="25"
+                android:textAlignment="center"
+                android:fontFamily="@font/oswald_medium"
+                android:shadowColor="@color/cardview_light_background"
+                android:text="Forbidden Kingdom"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <RatingBar
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/title_movie"
+                android:progressTint="#FDD830"
+                android:numStars="5"
+                android:stepSize="1"
+                android:rating="5"
+                android:isIndicator="true" />
+
+            <TextView
+                android:id="@+id/year_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:textAlignment="viewEnd"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/abel"
+                android:layout_alignParentEnd="true"
+                android:text="2020"
+                android:visibility="gone"
+                android:layout_toRightOf="@+id/title_movie"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/name_layout"
+            android:id="@+id/year_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:visibility="visible"
+            android:paddingTop="5dp"
+           >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/genre_movie_recyle"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:visibility="visible"/>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/year_layout"
+            android:id="@+id/rating_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:visibility="gone"
+            android:paddingTop="5dp"
+            >
+
+            <RatingBar
+                android:id="@+id/rating2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/ratingBarStyleSmall"
+                android:progressTint="#FDD830"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:rating="4"
+                android:isIndicator="true" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/rating_layout"
+            android:id="@+id/quality_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:visibility="gone"
+            android:paddingTop="5dp"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/qualityrecyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"></androidx.recyclerview.widget.RecyclerView>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

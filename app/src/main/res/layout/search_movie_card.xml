@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginBottom="2dp"
+
+    app:cardBackgroundColor="@android:color/transparent"
+
+
+    >
+
+    <LinearLayout
+        android:id="@+id/"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+        <androidx.cardview.widget.CardView
+        android:id="@+id/homeview"
+        android:layout_width="110dp"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="@android:color/transparent"
+       >
+
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            android:background="@drawable/placeholder_movie" />
+    </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight=".8"
+            android:paddingTop="15dp"
+            android:paddingLeft="10dp"
+           >
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+                android:textStyle="bold"
+            android:text="Forbidden Kingdom"
+            android:id="@+id/title"
+            android:layout_margin="2dp"/>
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="2020"
+                android:layout_margin="2dp"/>
+            <RatingBar
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/ratingBarStyleSmall"
+                android:progressTint="#FDD830"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:rating="4"
+                android:isIndicator="true" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/qualityrecyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"></androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+

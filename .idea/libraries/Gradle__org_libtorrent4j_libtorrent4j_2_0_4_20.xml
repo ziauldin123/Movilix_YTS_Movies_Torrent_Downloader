@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.libtorrent4j:libtorrent4j:2.0.4-20">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.libtorrent4j/libtorrent4j/2.0.4-20/191cd2ca46fdadaae8c2f66d321b2f40110969c8/libtorrent4j-2.0.4-20.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.libtorrent4j/libtorrent4j/2.0.4-20/3ac86b746f07ca11672ab5df993ef008e5f82d70/libtorrent4j-2.0.4-20-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.libtorrent4j/libtorrent4j/2.0.4-20/878f79f06665ede3b4813de832016e684eb8baf0/libtorrent4j-2.0.4-20-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

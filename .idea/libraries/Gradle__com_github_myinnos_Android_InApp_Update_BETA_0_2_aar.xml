@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.myinnos:Android-InApp-Update:BETA-0.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5ef02a82d6550569d037cd6f646b7345/jetified-Android-InApp-Update-BETA-0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5ef02a82d6550569d037cd6f646b7345/jetified-Android-InApp-Update-BETA-0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5ef02a82d6550569d037cd6f646b7345/jetified-Android-InApp-Update-BETA-0.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.myinnos/Android-InApp-Update/BETA-0.2/66943c12dcbff20e6b2071210f8df194abf85def/Android-InApp-Update-BETA-0.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.myinnos/Android-InApp-Update/BETA-0.2/57f85906805c08b0669938e3f6ffea05dd006b63/Android-InApp-Update-BETA-0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
