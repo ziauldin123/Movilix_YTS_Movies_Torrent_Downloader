@@ -1,5 +1,7 @@
 package com.movilix;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +24,7 @@ import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -91,6 +94,7 @@ import com.movilix.torrant.receiver.NotificationReceiver;
 import com.movilix.torrant.ui.AboutAlertDialog;
 import com.movilix.torrant.ui.BaseAlertDialog;
 import com.movilix.torrant.ui.FragmentCallback;
+import com.movilix.torrant.ui.PermissionDeniedDialog;
 import com.movilix.torrant.ui.detailtorrent.BlankFragment;
 import com.movilix.torrant.ui.detailtorrent.DetailTorrentActivity;
 import com.movilix.torrant.ui.detailtorrent.DetailTorrentFragment;
@@ -175,6 +179,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     ExitDialog exitDialog;
     private AppUpdateManager appUpdateManager;
     SharedPref sharedPref;
+    private PermissionDeniedDialog permDeniedDialog;
+    private static final String TAG_PERM_DENIED_DIALOG = "perm_denied_dialog";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(Utils.getAppTheme(getApplicationContext()));
@@ -198,14 +204,20 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         msgViewModel = provider.get(MsgMainViewModel.class);
         dialogViewModel = provider.get(BaseAlertDialog.SharedViewModel.class);
         aboutDialog = (AboutAlertDialog)getSupportFragmentManager().findFragmentByTag(TAG_ABOUT_DIALOG);
+        FragmentManager fm = getSupportFragmentManager();
 
-        if (savedInstanceState != null)
-            permDialogIsShow = savedInstanceState.getBoolean(TAG_PERM_DIALOG_IS_SHOW);
-
+//        if (savedInstanceState != null)
+//            permDialogIsShow = savedInstanceState.getBoolean(TAG_PERM_DIALOG_IS_SHOW);
+//
 //        if (!Utils.checkStoragePermission(getApplicationContext()) && !permDialogIsShow) {
 //            permDialogIsShow = true;
 //            startActivity(new Intent(this, RequestPermissions.class));
 //        }
+        permDeniedDialog = (PermissionDeniedDialog)fm.findFragmentByTag(TAG_PERM_DENIED_DIALOG);
+
+        if (!Utils.checkStoragePermission(this) && permDeniedDialog == null) {
+            storagePermission.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        }
 
         setContentView(R.layout.activity_main);
         context=MainActivity.this;
@@ -235,6 +247,19 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
 
     }
+    private final ActivityResultLauncher<String> storagePermission = registerForActivityResult(
+            new ActivityResultContracts.RequestPermission(),
+            isGranted -> {
+                if (!isGranted && Utils.shouldRequestStoragePermission(this)) {
+                    FragmentManager fm = getSupportFragmentManager();
+                    if (fm.findFragmentByTag(TAG_PERM_DENIED_DIALOG) == null) {
+                        permDeniedDialog = PermissionDeniedDialog.newInstance();
+                        FragmentTransaction ft = fm.beginTransaction();
+                        ft.add(permDeniedDialog, TAG_PERM_DENIED_DIALOG);
+                        ft.commitAllowingStateLoss();
+                    }
+                }
+            });
     public void load_native(){
         AdLoader.Builder builder = new AdLoader.Builder(MainActivity.this, AD_NATIVE_2_KEY);
 

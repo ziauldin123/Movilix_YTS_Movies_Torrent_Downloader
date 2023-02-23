@@ -4,7 +4,13 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/yts.iml" filepath="$PROJECT_DIR$/.idea/modules/yts.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/yts.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/yts.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/yts.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/yts.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/yts.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/yts.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/yts.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/yts.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/nativetemplates/yts.nativetemplates.iml" filepath="$PROJECT_DIR$/.idea/modules/nativetemplates/yts.nativetemplates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nativetemplates/yts.nativetemplates.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/nativetemplates/yts.nativetemplates.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nativetemplates/yts.nativetemplates.main.iml" filepath="$PROJECT_DIR$/.idea/modules/nativetemplates/yts.nativetemplates.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nativetemplates/yts.nativetemplates.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/nativetemplates/yts.nativetemplates.unitTest.iml" />
     </modules>
   </component>
 </project>

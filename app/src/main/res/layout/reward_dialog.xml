@@ -45,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="You can easily get 10 credits by watching this short video ad."
+            android:text="Watching this short video ad to move forward."
             android:textAlignment="center"
             android:textColor="@color/background"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />

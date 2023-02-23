@@ -7,6 +7,8 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7d4d748e5f97f264ef4fb1240dfeb70a/jetified-inmobi-omsdk-1.3.17.1/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7d4d748e5f97f264ef4fb1240dfeb70a/jetified-inmobi-omsdk-1.3.17.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7d4d748e5f97f264ef4fb1240dfeb70a/jetified-inmobi-omsdk-1.3.17.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a91b0228114bb0f9fb08eb8559467e49/jetified-inmobi-omsdk-1.3.17.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a91b0228114bb0f9fb08eb8559467e49/jetified-inmobi-omsdk-1.3.17.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -115,6 +115,7 @@ public class MovieDetails extends YouTubeBaseActivity implements View.OnClickLis
     private RewardedAd rewardedAd = null;
     private static final String TAG_PERM_DIALOG_IS_SHOW = "perm_dialog_is_show";
     private static final String TAG_ABOUT_DIALOG = "about_dialog";
+    private Torrent mTorrent;
     //ArrayLIst
     ArrayList<Model> sugesstionlist = new ArrayList<>();
     Praser p;
@@ -271,7 +272,11 @@ public class MovieDetails extends YouTubeBaseActivity implements View.OnClickLis
                                 public void onInterstitialDismissed(Ad ad) {
 
                                     sharedPref.saveData("points", "10");
-                                    Toast.makeText(MovieDetails.this,"Coins Granted",Toast.LENGTH_LONG).show();
+                                    Intent torrentIntent = new Intent(getApplicationContext(), AddTorrentActivity.class);
+                                    torrentIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    torrentIntent.setData(Uri.parse(mTorrent.getUrl()));
+                                    startActivity(torrentIntent);
+//                                    Toast.makeText(MovieDetails.this,"Coins Granted",Toast.LENGTH_LONG).show();
                                 }
 
                                 @Override
@@ -561,7 +566,7 @@ public class MovieDetails extends YouTubeBaseActivity implements View.OnClickLis
 
             @Override
             public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-
+                Log.d(TAG, "onInitializationFailure: Youtube error " +youTubeInitializationResult.toString());
             }
 
         };
@@ -705,20 +710,21 @@ public class MovieDetails extends YouTubeBaseActivity implements View.OnClickLis
 
     @Override
     public void onItemDownload(Torrent torrent) {
+        mTorrent=torrent;
         sharedPref = SharedPref.getInstance(this);
         rem_points = Integer.parseInt(sharedPref.getData("points"));
-        if( rem_points > 2) {
-//            Log.d("torrent", torrent.getHash().toString());
-            sharedPref.saveData("points", String.valueOf(rem_points - 3));
-            Intent torrentIntent = new Intent(this, AddTorrentActivity.class);
-            torrentIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            torrentIntent.setData(Uri.parse(torrent.getUrl()));
-            startActivity(torrentIntent);
-        }
-        else{
-            showCustomDialog();
+//        if( rem_points > 2) {
+////            Log.d("torrent", torrent.getHash().toString());
+//            sharedPref.saveData("points", String.valueOf(rem_points - 3));
+//            Intent torrentIntent = new Intent(this, AddTorrentActivity.class);
+//            torrentIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            torrentIntent.setData(Uri.parse(torrent.getUrl()));
+//            startActivity(torrentIntent);
+//        }
+//        else{
+        showCustomDialog();
 //            Toast.makeText(this,"Points Low, please watch video to get more points",Toast.LENGTH_LONG).show();
-        }
+//        }
     }
 //    private void showAboutDialog()
 //    {
@@ -765,7 +771,7 @@ public class MovieDetails extends YouTubeBaseActivity implements View.OnClickLis
         //finally creating the alert dialog and displaying it
         AlertDialog alertDialog = builder.create();
         TextView titleView = new TextView(this);
-        titleView.setText("You have 0 credits");
+        titleView.setText("Alert");
         titleView.setGravity(Gravity.CENTER);
         titleView.setPadding(20, 20, 20, 20);
         titleView.setTextSize(20F);
@@ -839,6 +845,10 @@ public class MovieDetails extends YouTubeBaseActivity implements View.OnClickLis
 //                        Toast.makeText(this, "onAdDismissedFullScreenContent", Toast.LENGTH_SHORT)
 //                                .show();
                             // Preload the next rewarded ad.
+                            Intent torrentIntent = new Intent(getApplicationContext(), AddTorrentActivity.class);
+                            torrentIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            torrentIntent.setData(Uri.parse(mTorrent.getUrl()));
+                            startActivity(torrentIntent);
                             loadRewardedAd();
                         }
                     });
@@ -852,10 +862,12 @@ public class MovieDetails extends YouTubeBaseActivity implements View.OnClickLis
                             Log.d("TAG", "The user earned the reward.");
                             sharedPref.saveData("points", "10");
 
+
                         }
                     });
             return;
-        }else if(interstitialAd != null && interstitialAd.isAdLoaded())  {
+        }
+        else if(interstitialAd != null && interstitialAd.isAdLoaded())  {
 
             progressBar.setVisibility(View.GONE);
             interstitialAd.show();
@@ -866,8 +878,12 @@ public class MovieDetails extends YouTubeBaseActivity implements View.OnClickLis
                 @Override
                 public void run() {
                     progressBar.setVisibility(View.GONE);
-                    sharedPref.saveData("points", "10");
-                    Toast.makeText(MovieDetails.this,"Coins Granted",Toast.LENGTH_LONG).show();
+//                    sharedPref.saveData("points", "10");
+//                    Toast.makeText(MovieDetails.this,"Coins Granted",Toast.LENGTH_LONG).show();
+                    Intent torrentIntent = new Intent(getApplicationContext(), AddTorrentActivity.class);
+                    torrentIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    torrentIntent.setData(Uri.parse(mTorrent.getUrl()));
+                    startActivity(torrentIntent);
                 }
             }, 3000);
 

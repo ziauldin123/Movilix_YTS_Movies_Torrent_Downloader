@@ -53,6 +53,8 @@ public class TorrentListAdapter extends ListAdapter<TorrentListItem, TorrentList
         this.selectionTracker = selectionTracker;
     }
 
+
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
@@ -65,6 +67,14 @@ public class TorrentListAdapter extends ListAdapter<TorrentListItem, TorrentList
 
         return new ViewHolder(binding);
     }
+//    @Override
+//    public int getItemViewType(int position) {
+//        if (AD_LOGIC_CONDITION)) {
+//            return AD_TYPE;
+//        } else{
+//            return CONTENT_TYPE; ///do not forget to initialize any of AD_TYPE and CONTENT_TYPE
+//        }
+//    }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position)
@@ -249,7 +259,7 @@ public class TorrentListAdapter extends ListAdapter<TorrentListItem, TorrentList
             }
 
             if (isOpened)
-                d = ContextCompat.getDrawable(context, R.color.primary_light);
+                d = ContextCompat.getDrawable(context, R.color.gnt_white);
             else
                 d = ContextCompat.getDrawable(context, android.R.color.transparent);
             if (d != null)

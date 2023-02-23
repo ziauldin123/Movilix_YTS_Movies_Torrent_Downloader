@@ -37,7 +37,7 @@ public class MainApplication extends MultiDexApplication
     private static final String TAG = MainApplication.class.getSimpleName();
     public  static int homeGAdsClic=1;
     public  static int homeFbAdsClic=1;
-    Service
+
 
     public static String AD_OPEN_KEY = "";
     public static String AD_HOME_KEY = "";
@@ -46,6 +46,8 @@ public class MainApplication extends MultiDexApplication
     public static String AD_NATIVE_3_KEY = "";
     public static String AD_NATIVE_4_KEY = "";
     public static String AD_REWARDED_KEY = "";
+    public static String FB_Inter_1_KEY = "";
+    public static String FB_Inter_2_KEY = "";
 
 
     public  static boolean is_first_open=false;
@@ -64,12 +66,16 @@ public class MainApplication extends MultiDexApplication
         FirebaseAnalytics.getInstance(this);
         FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true);
         AudienceNetworkAds.initialize(this);
-        AdSettings.addTestDevice("495eaf9e-d396-420e-9714-f489d4ace99a");
-//        new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("B607EF521ED26E1F9866009C9CC991F0"));
+
+        //Test Devices
+//        AdSettings.addTestDevice("e24d268c-0928-49e0-b9d6-170106024ee4");
+//
 //        List<String> testDeviceIds = Arrays.asList("B607EF521ED26E1F9866009C9CC991F0");
 //        RequestConfiguration configuration =
 //                new RequestConfiguration.Builder().setTestDeviceIds(testDeviceIds).build();
 //        MobileAds.setRequestConfiguration(configuration);
+
+
 //        MobileAds.initialize(this, new OnInitializationCompleteListener() {
 //            @Override
 //            public void onInitializationComplete(InitializationStatus initializationStatus) {
@@ -109,13 +115,24 @@ public class MainApplication extends MultiDexApplication
             }
         }).check();
 
-        AD_HOME_KEY=sharedPref.getData("home_key");
-        AD_NATIVE_1_KEY=sharedPref.getData("native_1_key");
-        AD_NATIVE_2_KEY=sharedPref.getData("native_2_key");
-        AD_NATIVE_3_KEY=sharedPref.getData("native_3_key");
-        AD_NATIVE_4_KEY=sharedPref.getData("native_4d_key");
-        AD_OPEN_KEY=sharedPref.getData("app_open_key");
-        AD_REWARDED_KEY=sharedPref.getData("rewarded_key");
-
+        if (BuildConfig.DEBUG) {
+            AD_HOME_KEY = "ca-app-pub-3940256099942544/1033173712";
+            AD_NATIVE_1_KEY = "ca-app-pub-3940256099942544/2247696110";
+            AD_NATIVE_2_KEY = "ca-app-pub-3940256099942544/2247696110";
+            AD_NATIVE_3_KEY = "ca-app-pub-3940256099942544/2247696110";
+            AD_NATIVE_4_KEY = "ca-app-pub-3940256099942544/2247696110";
+            AD_OPEN_KEY = "ca-app-pub-3940256099942544/3419835294";
+            AD_REWARDED_KEY = "ca-app-pub-3940256099942544/5224354917";
+        } else {
+            AD_HOME_KEY = sharedPref.getData("home_key");
+            AD_NATIVE_1_KEY = sharedPref.getData("native_1_key");
+            AD_NATIVE_2_KEY = sharedPref.getData("native_2_key");
+            AD_NATIVE_3_KEY = sharedPref.getData("native_3_key");
+            AD_NATIVE_4_KEY = sharedPref.getData("native_4d_key");
+            AD_OPEN_KEY = sharedPref.getData("app_open_key");
+            AD_REWARDED_KEY = sharedPref.getData("rewarded_key");
+            FB_Inter_1_KEY = sharedPref.getData("fb_inter_1_key");
+            FB_Inter_2_KEY = sharedPref.getData("fb_inter_2_key");
+        }
     }
 }

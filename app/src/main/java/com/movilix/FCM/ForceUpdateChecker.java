@@ -31,6 +31,9 @@ public class ForceUpdateChecker {
     public static final String AD_NATIVE_4_KEY = "ad_native_adv_4_key";
     public static final String AD_REWARDED_KEY = "ad_rewarded_key";
     public static final String KEY_UPDATE_REQUIRED = "key_updated_required";
+    public static final String FB_INTER_KEY_1 = "fb_inter_1_key";
+    public static final String FB_INTER_KEY_2 = "fb_inter_2_key";
+
 //    public static final String AD_OPEN_KEY = "ad_open_key";
 
     private OnUpdateNeededListener onUpdateNeededListener;
@@ -74,6 +77,8 @@ public class ForceUpdateChecker {
                         String native_4_key = remoteConfig.getString(AD_NATIVE_4_KEY);
                         String app_open_key = remoteConfig.getString(AD_OPEN_KEY);
                         String rewarded_key = remoteConfig.getString(AD_REWARDED_KEY);
+                        String fb_inter_1_key = remoteConfig.getString(FB_INTER_KEY_1);
+                        String fb_inter_2_key = remoteConfig.getString(FB_INTER_KEY_2);
 
                         sharedPref.saveData("home_key",home_key);
                         sharedPref.saveData("native_1_key",native_1_key);
@@ -82,7 +87,9 @@ public class ForceUpdateChecker {
                         sharedPref.saveData("native_4d_key",native_4_key);
                         sharedPref.saveData("app_open_key",app_open_key);
                         sharedPref.saveData("rewarded_key",rewarded_key);
-                        Log.d(TAG, "home_key: " +   remoteConfig.getString(AD_HOME_KEY));
+                        sharedPref.saveData("fb_inter_1_key",fb_inter_1_key);
+                        sharedPref.saveData("fb_inter_2_key",fb_inter_2_key);
+//                        Log.d(TAG, "home_key: " +   remoteConfig.getString(AD_HOME_KEY));
 //                        Log.d(TAG, "Config params updated: " +   remoteConfig.getString(KEY_CURRENT_VERSION));
 //                        Log.d(TAG, "Config params updated: " +   remoteConfig.getString(KEY_UPDATE_URL));
 

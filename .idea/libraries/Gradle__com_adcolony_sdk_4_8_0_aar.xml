@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.adcolony:sdk:4.8.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4eb15808313cdcfa28c65b41483af909/jetified-sdk-4.8.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4eb15808313cdcfa28c65b41483af909/jetified-sdk-4.8.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.adcolony/sdk/4.8.0/78a19de396caab3f8132185f3f3bfd23e8352595/sdk-4.8.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.adcolony/sdk/4.8.0/ddc09940c31b285b2cb64050f42be86e97b33acf/sdk-4.8.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
