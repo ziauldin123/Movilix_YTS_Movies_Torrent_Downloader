@@ -1,5 +1,5 @@
 
-# Movilix - YTS Movie Downloader 🎬
+# Movilix - YTS Movies with Torrent Downloader 🎬
 
 Movilix is a feature-rich Android app designed to provide users with an easy way to discover and download YTS movies. With Movilix, you can stay updated on the latest movies, watch trailers, and download HD movies directly using torrent functionality.
 
